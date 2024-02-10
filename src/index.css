@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .png-container {
+        overflow: hidden;
+    }
+      
+    .logo {  
+        filter: drop-shadow(0px 1000px 0 rgb(69 26 3));
+        transform: translateY(-1000px);
+    }
+
+    .bg-header {
+        background: #7f5539b3;
+    }
+
+    .anim-fadein {
+        opacity:  0;
+        animation: anim-fadein linear;
+        animation-timeline: view();
+        animation-range-start: contain 30vh;
+        animation-range-end: contain 85vh;
+    }
+
+    @keyframes anim-fadein {
+        to {opacity: 1;}
+    }
+}

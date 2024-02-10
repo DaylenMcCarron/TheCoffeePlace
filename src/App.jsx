@@ -1,10 +1,13 @@
+import Cart from "./Cart"
+import Header from "./Header"
+import Home from "./Home"
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline bg-green-500">
-      Hello world!
-    </h1>
+      <Cart />
+      <Header /> 
+      <Home />
     </>
   )
 }
