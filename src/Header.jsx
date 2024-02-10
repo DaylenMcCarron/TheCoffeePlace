@@ -9,7 +9,7 @@ const Header = () => {
             </div>
             <div className=" basis-[5%] flex items-center justify-center"> </div>
             <div className=" basis-[56%] basis">
-                <img src="./src/assets/TCPText.png"  alt="" className="w-full h-full object-contain logo" />
+                <img src="./assets/TCPText.png"  alt="" className="w-full h-full object-contain logo" />
             </div>
 
             <div className=" basis-[12%] flex items-center justify-center">

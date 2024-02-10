@@ -53,7 +53,7 @@ const Home = () => {
                 <img
                     id="landing-image"
                     className={`w-full h-[100vh] object-cover transition-all duration-[30000ms] ${imageClass}`}
-                    src="./src/assets/coffeeLanding.gif"
+                    src="./assets/coffeeLanding.gif"
                     alt=""
                 />
                 
