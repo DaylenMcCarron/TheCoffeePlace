@@ -1,6 +1,7 @@
 import Cart from "./Cart"
 import Header from "./Header"
 import Home from "./Home"
+import Products from "./Products"
 function App() {
 
   return (
@@ -8,6 +9,7 @@ function App() {
       <Cart />
       <Header /> 
       <Home />
+      <Products />
     </>
   )
 }
