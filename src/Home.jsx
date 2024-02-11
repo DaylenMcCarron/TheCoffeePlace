@@ -27,7 +27,7 @@ const Home = () => {
     useEffect(() => {
         const handleScroll = () => {
             // Set the scroll threshold value in pixels
-            const scrollThreshold = VhtoPx(160); // Change this value as needed
+            const scrollThreshold = VhtoPx(320); // Change this value as needed
 
             // Check the scroll position
             const scrollPosition = window.scrollY || document.documentElement.scrollTop;
@@ -48,12 +48,12 @@ const Home = () => {
             } else {
                 setOneTextClass('opacity-0')
             }
-            if (scrollPosition > VhtoPx(60) && scrollPosition < VhtoPx(110)) {
+            if (scrollPosition > VhtoPx(120) && scrollPosition < VhtoPx(170)) {
                 setTwoTextClass('opacity-1')
             } else {
                 setTwoTextClass('opacity-0')
             }
-            if (scrollPosition > VhtoPx(120) && scrollPosition < VhtoPx(160)) {
+            if (scrollPosition > VhtoPx(240) && scrollPosition < VhtoPx(290)) {
                 setThreeTextClass('opacity-1')
             } else {
                 setThreeTextClass('opacity-0')
@@ -70,7 +70,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="bg-coffee-1 w-full h-[260vh]">
+        <div className="bg-coffee-1 w-full h-[420vh]">
             <div className="pt-[7vh] bg-coffee-5"></div>
             <div className="w-full h-[30vh] object-contain" style={{ position: imagePosition, top: `${lastFixedPosition}px` }}>
                 <img

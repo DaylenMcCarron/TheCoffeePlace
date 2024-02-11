@@ -1,7 +1,7 @@
 
 const Header = () => {
     return(
-        <header className="flex h-[7vh] w-full backdrop-blur-sm fixed bg-header z-40">
+        <header className="flex h-[7vh] w-full backdrop-blur-sm fixed bg-header z-40 border-b-2 border-amber-950 shadow-lg">
             <div className=" basis-[15%] flex items-center justify-center">
             <span className="material-symbols-outlined  text-coffee-1 text-3xl">
                 side_navigation
