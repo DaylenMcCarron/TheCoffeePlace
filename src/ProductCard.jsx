@@ -1,8 +1,8 @@
 
 const ProductCard = () => {
     return (
-        <div className="w-full h-56  rounded-xl shadow-md relative border-coffee-5 border-[1px] bg-coffee-1">
-            <img className="object-cover w-full h-44 rounded-xl shadow-xl" src="./assets/chocolateCappuccino.jpg" alt="" />
+        <div className="w-full h-64  rounded-md shadow-sm relative border-coffee-5 bg-coffee-1">
+            <img className="object-cover w-full h-52 rounded-md shadow-xl" src="./assets/chocolateCappuccino.jpg" alt="" />
 
             <h1 className=" pb-2 pl-2 text-md text-coffee-5 font-semibold">Chocolate<br /> Cappuccino</h1>
             <div className="absolute bottom-2 right-2 border-2 border-coffee-5 rounded-md w-7 h-7 bg-coffee-1 text-white flex align-middle justify-center">

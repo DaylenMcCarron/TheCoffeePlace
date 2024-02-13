@@ -1,4 +1,5 @@
 import Cart from "./Cart"
+import ContactUs from "./ContactUs"
 import Header from "./Header"
 import Home from "./Home"
 import Products from "./Products"
@@ -10,6 +11,7 @@ function App() {
       <Header /> 
       <Home />
       <Products />
+      <ContactUs />
     </>
   )
 }
