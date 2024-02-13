@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         coffee: {
-          1: '#EDE0D4',
+          1: '#f3ece6',
           2: '#E6CCB2',
           3: '#DDB892',
           4: '#B08968',

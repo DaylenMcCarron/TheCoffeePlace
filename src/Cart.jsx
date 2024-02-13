@@ -1,8 +1,8 @@
 
 const Cart = () => {
     return (
-        <div className="fixed bottom-0 z-40 bg-white w-full h-[8vh] flex backdrop-blur-sm bg-header ">
-            <div className=" basis-[10%] bg-slate-200 flex items-center justify-center">
+        <div className="fixed bottom-0 z-40 bg-coffee-2 w-full h-[8vh] border-t-[1px] border-coffee-4 flex backdrop-blur-sm bg-header ">
+            <div className=" basis-[10%] bg-coffee-3 flex items-center justify-center">
             <span className="material-symbols-outlined -rotate-90">
 arrow_forward_ios
 </span>
