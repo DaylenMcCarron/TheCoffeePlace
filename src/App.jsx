@@ -1,5 +1,5 @@
 import Cart from "./Cart"
-import CartWindow from "./CartWindow"
+
 import ContactUs from "./ContactUs"
 import FAQ from "./FAQ"
 import Footer from "./Footer"
