@@ -10,15 +10,15 @@ function App() {
 
   return (
     <>
-      <Cart />
-      {/* <CartWindow /> */}
       <Header /> 
+      <Cart />
       <Home />
       <Products />
 
       <FAQ />
       <ContactUs />
       <Footer />
+      
     </>
   )
 }
