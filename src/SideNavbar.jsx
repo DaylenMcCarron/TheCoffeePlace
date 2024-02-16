@@ -2,7 +2,49 @@
 const SideNavbar = () => {
     return (
         <div className=" fixed bg-coffee-1 border-coffee-5 shadow-lg rounded-lg h-2/3 border-r-4 border-b-4 z-30 w-[80vw]">
-
+            <div className=" w-full h-[60%] mt-[8vh] grid grid-flow-row gap-y-2">
+                <p className="w-full text-center">Home</p>
+                <p className="w-full text-center">About Us</p>
+                <p className="w-full text-center">Shop</p>
+                <p className="w-full text-center">FAQ</p>
+                <p className="w-full text-center">Find Us</p>
+                <p className="w-full text-center">Orders</p>
+            </div>
+            <div className=" w-full h-[25%]">
+                <div className="w-full h-1/2 bg-glass flex">
+                    <div className=" h-full basis-3/12 p-1">
+                        <div className="bg-coffee-2 rounded-full h-full">
+                        <img 
+                    className="mx-auto h-full"
+                    src="/assets/undraw_drink_coffee_v3au.svg" 
+                    alt="" 
+                />
+                        </div>
+                    </div>
+                    <div className="basis-9/12 pl-3 my-auto font-semibold">
+                        Donatus. N
+                    </div>
+                </div>
+                <div className="w-full h-1/2 bg-coffee-5 shadow-inner">
+                    <div className="flex justify-center items-center gap-3">
+                        <div className="h-12 w-12  p-2 mt-1">
+                            <img className="" src="./assets/icons8-instagram-150.png" alt="" />
+                        </div>
+                        <div className="h-12 w-12  p-2 mt-1">
+                            {/* Your icon component or image here */}
+                            <img className="" src="./assets/icons8-threads-144.png" alt="" />
+                        </div>
+                        <div className="h-12 w-12  p-2 mt-1">
+                            {/* Your icon component or image here */}
+                            <img className="" src="./assets/icons8-facebook-150.png" alt="" />
+                        </div>
+                        <div className="h-12 w-12 p-2 mt-1">
+                            {/* Your icon component or image here */}
+                            <img className="" src="./assets/icons8-youtube-150.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

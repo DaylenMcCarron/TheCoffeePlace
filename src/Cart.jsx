@@ -1,8 +1,12 @@
 import CartWindow from "./CartWindow"
-
+import { useContext } from "react"
+import { MyContext } from "./context"
 import { useState } from "react"
 
 const Cart = () => {
+
+    const context = useContext(MyContext)
+
 
     const [viewCart,setViewCart] = useState(false)
 
@@ -20,7 +24,7 @@ arrow_forward_ios
 </span>
             </div>
             <div className=" basis-[58%] flex flex-col items-right pl-3 justify-center text-coffee-5">
-                <p>Items: 4</p>
+                <p>Items: {context.items}</p>
                 <p>Total: <span>&#8377;</span>1245/-</p>
             </div>
             <div className=" basis-[30%] flex items-center  justify-center"> 

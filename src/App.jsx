@@ -1,4 +1,5 @@
 import Cart from "./Cart"
+import { MyProvider } from "./context"
 
 import ContactUs from "./ContactUs"
 import FAQ from "./FAQ"
@@ -9,7 +10,7 @@ import Products from "./Products"
 function App() {
 
   return (
-    <>
+    <MyProvider>
       <Header /> 
       <Cart />
       <Home />
@@ -19,7 +20,7 @@ function App() {
       <ContactUs />
       <Footer />
       
-    </>
+    </MyProvider>
   )
 }
 
