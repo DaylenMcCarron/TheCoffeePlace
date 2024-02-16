@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom"
 
 const SideNavbar = () => {
     return (
         <div className=" fixed bg-coffee-1 border-coffee-5 shadow-lg rounded-lg h-2/3 border-r-4 border-b-4 z-30 w-[80vw]">
             <div className=" w-full h-[60%] mt-[8vh] grid grid-flow-row gap-y-2">
-                <p className="w-full text-center">Home</p>
-                <p className="w-full text-center">About Us</p>
+                <Link to='/' className="w-full text-center">Home</Link>
+                <Link to='about' className="w-full text-center">About Us</Link>
                 <p className="w-full text-center">Shop</p>
                 <p className="w-full text-center">FAQ</p>
                 <p className="w-full text-center">Find Us</p>

@@ -24,9 +24,9 @@ const CartItem = () => {
             <div className="min-h-[16vw] h-[16vw] w-fit">
                 <h1 className=" text-center mt-2 text-sm font-bold text-coffee-5 bg-white border-coffee-4 border-[1px] border-b-0 rounded-t-md"><span>&#8377;</span> 344/-</h1>
             <div className="border-[1px] border-coffee-2 rounded-md w-fit h-fit bg-coffee-2 text-white flex align-middle justify-center">
-                <span className="material-symbols-outlined text-coffee-5">add</span>
-                <span className="font-bold text-coffee-5 bg-white px-1">1</span>
                 <span className="material-symbols-outlined text-coffee-5">remove</span>
+                <span className="font-bold text-coffee-5 bg-white px-1">1</span>
+                <span className="material-symbols-outlined text-coffee-5">add</span>
             </div>
             </div>
         </div>

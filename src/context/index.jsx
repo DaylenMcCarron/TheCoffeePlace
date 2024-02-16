@@ -2,7 +2,11 @@ import { createContext, useState } from "react";
 
 const MyContext = createContext();
 const MyProvider = (props) => {
+
     const[items,setItems] = useState(0)
+
+
+
 
     const incItems = () => {
         setItems(items+1);

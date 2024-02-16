@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import Products from './Products';
+import FAQ from './FAQ';
+import ContactUs from './ContactUs';
 
 const Home = () => {
     const [imageClass, setImageClass] = useState('object-left');
@@ -70,6 +73,7 @@ const Home = () => {
     }, []);
 
     return (
+        <>
         <div className="bg-coffee-1 w-full h-[420lvh]">
             <div className="pt-[7vh] bg-coffee-5"></div>
             <div className="w-full h-[30vh] object-contain" style={{ position: imagePosition, top: `${lastFixedPosition}px` }}>
@@ -96,6 +100,10 @@ const Home = () => {
             </div>
             
         </div>
+        <Products />
+        <FAQ />
+        <ContactUs />
+        </>
     );
 };
 
