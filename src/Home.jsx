@@ -74,7 +74,7 @@ const Home = () => {
 
     return (
         <>
-        <div className="bg-coffee-1 w-full h-[420lvh]">
+        <div className="bg-coffee-1 w-full h-[420dvh]">
             <div className="pt-[7vh] bg-coffee-5"></div>
             <div className="w-full h-[30vh] object-contain" style={{ position: imagePosition, top: `${lastFixedPosition}px` }}>
                 <img

@@ -2,14 +2,14 @@
 const About = () => {
 
     return (
-        <div className="z-20 h-fit pb-[20vh] ">
+        <div className="z-20 h-fit pb-[20vh] bg-coffee-1">
             <div className=" h-[70vh] w-screen bg-coffee-5 bg-gradient-to-b from-black to-[#00000096] pt-[10vh]">
                 <h1 className=" text-white mt-[20%] text-2xl text-center px-5 font-bold">
                     We're on a mission to provide an enriched coffee experience no matter where you are 
                 </h1>
                 <img src="assets/The Coffee Place final.png" alt="" className=" w-1/2 mx-auto" />
             </div>
-            <div className=" w-full h-fit bg-white overflow-y-scroll py-10">
+            <div className=" w-full h-fit  overflow-y-scroll text-coffee-5 py-10">
                 <p className="p-3 font-semibold text-center">
                 At The Coffee Place, we believe in the transformative power of a good cup of coffee. Our journey began with a simple yet profound idea: to create a space where people could come together to savor exceptional coffee, engage in meaningful conversations, and forge lasting connections.
                 </p>

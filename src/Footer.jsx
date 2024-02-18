@@ -7,19 +7,24 @@ const Footer = () => {
                 <Newsletter />
                 <div className="flex justify-center items-center gap-4">
                     <div className="h-14 w-14 rounded-full p-2">
-                        <img className="" src="./assets/icons8-instagram-150.png" alt="" />
+                        <a href="https://www.instagram.com/the_coffee_place_india/" target="_blank" rel="noopener noreferrer">
+                            <img className="" src="./assets/icons8-instagram-150.png" alt="" />
+                        </a>
                     </div>
                     <div className="h-14 w-14 rounded-full p-2">
-                        {/* Your icon component or image here */}
-                        <img className="" src="./assets/icons8-threads-144.png" alt="" />
+                        <a href="https://www.threads.net/@the_coffee_place_india" target="_blank" rel="noopener noreferrer">
+                            <img className="" src="./assets/icons8-threads-144.png" alt="" />
+                        </a>
                     </div>
                     <div className="h-14 w-14 rounded-full p-2">
-                        {/* Your icon component or image here */}
-                        <img className="" src="./assets/icons8-facebook-150.png" alt="" />
+                        <a href="https://m.facebook.com/profile.php/?id=61555386916506" target="_blank" rel="noopener noreferrer">
+                            <img className="" src="./assets/icons8-facebook-150.png" alt="" />
+                        </a>
                     </div>
                     <div className="h-14 w-14 p-2">
-                        {/* Your icon component or image here */}
-                        <img className="" src="./assets/icons8-youtube-150.png" alt="" />
+                        <a href="https://www.youtube.com/@TheCoffeePlaceLtd." target="_blank" rel="noopener noreferrer">
+                            <img className="" src="./assets/icons8-youtube-150.png" alt="" />
+                        </a>
                     </div>
                  </div>
                 <div className=" mt-8 text-white">

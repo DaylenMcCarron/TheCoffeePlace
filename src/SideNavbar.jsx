@@ -29,20 +29,28 @@ const SideNavbar = () => {
                 <div className="w-full h-1/2 bg-coffee-5 shadow-inner">
                     <div className="flex justify-center items-center gap-3">
                         <div className="h-12 w-12  p-2 mt-1">
+                        <a href="https://www.instagram.com/the_coffee_place_india/" target="_blank" rel="noopener noreferrer">
                             <img className="" src="./assets/icons8-instagram-150.png" alt="" />
+                        </a>
                         </div>
                         <div className="h-12 w-12  p-2 mt-1">
-                            {/* Your icon component or image here */}
+                        <a href="https://www.threads.net/@the_coffee_place_india" target="_blank" rel="noopener noreferrer">
                             <img className="" src="./assets/icons8-threads-144.png" alt="" />
+                        </a>
                         </div>
                         <div className="h-12 w-12  p-2 mt-1">
-                            {/* Your icon component or image here */}
+                        <a href="https://m.facebook.com/profile.php/?id=61555386916506" target="_blank" rel="noopener noreferrer">
                             <img className="" src="./assets/icons8-facebook-150.png" alt="" />
+                        </a>
                         </div>
                         <div className="h-12 w-12 p-2 mt-1">
-                            {/* Your icon component or image here */}
+                        <a href="https://www.youtube.com/@TheCoffeePlaceLtd." target="_blank" rel="noopener noreferrer">
                             <img className="" src="./assets/icons8-youtube-150.png" alt="" />
+                        </a>
                         </div>
+                        
+                    
+                        
                     </div>
                 </div>
             </div>
