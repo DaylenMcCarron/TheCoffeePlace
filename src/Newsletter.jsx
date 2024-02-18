@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 const Newsletter = () => {
-    const [subscribe,setSubscribe] = useState(true)
+    const [subscribe,setSubscribe] = useState(false)
     
     return (
 
