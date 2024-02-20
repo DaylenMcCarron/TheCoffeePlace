@@ -11,9 +11,13 @@ import Home from "./Home"
 import Products from "./Products"
 import About from "./About"
 import Profile from "./Profile"
+import { AuthProvider } from "./context/AuthContext"
+import SignInForm from "./Signin"
+import SignUpForm from "./Signup"
 function App() {
 
   return (
+    <AuthProvider>
     <MyProvider>
       <BrowserRouter>
       <Header /> 
@@ -28,6 +32,7 @@ function App() {
       
       </BrowserRouter>
     </MyProvider>
+    </AuthProvider>
   )
 }
 
