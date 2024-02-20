@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import SideNavbar from "./SideNavbar"
 import Profile from "./Profile"
 import { Link } from "react-router-dom"
@@ -7,18 +7,42 @@ import { Link } from "react-router-dom"
 const Header = () => {
         const [sideNavActive,setSideNavActive] = useState(false)
         const [searchActive,setSearchActive] = useState(true)
+
+        const sideNavRef = useRef(null);
         
+        
+        useEffect(() => {
+            const handleClickOutside = (event) => {
+              if (sideNavActive && sideNavRef.current && !sideNavRef.current.contains(event.target)) {
+                setSideNavActive(false);
+              }
+            };
+          
+            if (sideNavActive) { // Only add if sideNav is active
+              document.addEventListener('mousedown', handleClickOutside);
+            }
+          
+            return () => document.removeEventListener('mousedown', handleClickOutside);
+          }, [sideNavActive]);
+
+
     return( <>
-        {sideNavActive ? 
-        <SideNavbar />
-        : null
-        }
+        <div ref={sideNavRef} className={` ${sideNavActive ? 'visible' : 'hidden'}`}>
+  <SideNavbar />
+</div>
         <header className="flex h-[7vh] w-full backdrop-blur-sm fixed bg-header z-40 border-b-2 border-amber-950 shadow-lg">
+            { sideNavActive == false ?
             <div className=" basis-[15%] flex items-center justify-center" onClick={()=>setSideNavActive(!sideNavActive)}>
             <span className="material-symbols-outlined  text-coffee-1 text-3xl">
                 side_navigation
             </span>
+            </div> :
+            <div className=" basis-[15%] flex items-center justify-center" onClick={()=>setSideNavActive(!sideNavActive)}>
+            <div className="material-symbols-outlined  text-coffee-1 text-3xl">
+                side_navigation
             </div>
+            </div>
+}
             <div className=" basis-[5%] flex items-center justify-center"> </div>
             <div className=" basis-[56%] basis">
                 {
