@@ -1,7 +1,7 @@
 import { useState } from "react"
 import SignInForm from "./Signin"
 import SignUpForm from "./Signup"
-import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth"
+import { GoogleAuthProvider, getRedirectResult, signInWithRedirect } from "firebase/auth"
 import { auth } from "./firebase"
 
 const LoginForm = () => {
