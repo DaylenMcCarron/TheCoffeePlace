@@ -37,7 +37,7 @@ const LoginForm = () => {
     return (<>
             <img src="./assets/The Coffee Place final.png" alt="" className=" w-[50%] mx-auto -my-10" />
         <div className="bg-glass h-fit py-4 shadow-md">
-            <div className="bg-white text-blue-500 font-semibold h-12 mx-10 rounded-lg flex content-center mb-[2vh] shadow-md "
+            <div className="bg-white text-blue-500 font-semibold h-12 mx-10 rounded-lg flex content-center mb-[2vh] shadow-md hover:shadow-none"
             onClick={()=>googleSignin()}>
                 <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-1772223-1507807.png" className="w-8 float-left m-2" alt="" />
                 <h1 className="w-full -ml-10 my-auto text-center">Sign in with Google</h1>
