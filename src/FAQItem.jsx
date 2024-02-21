@@ -7,7 +7,7 @@ const FAQItem = ({ id, question, answer}) => {
                 <h1 className="bg-coffee-2 mt-1 p-3 text-md">{question}</h1>
                 {
                     faqActive ? 
-                    <p className="px-3 pt-3 pb-5 text-sm">{answer}</p>
+                    <p className="px-3 pt-3 pb-8 text-sm text-coffee-5">{answer}</p>
                     :null
                 }
 

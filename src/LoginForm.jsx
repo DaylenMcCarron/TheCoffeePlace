@@ -1,7 +1,7 @@
 import { useState } from "react"
 import SignInForm from "./Signin"
 import SignUpForm from "./Signup"
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth"
+import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth"
 import { auth } from "./firebase"
 
 const LoginForm = () => {
@@ -10,32 +10,34 @@ const LoginForm = () => {
 
     const provider = new GoogleAuthProvider();
     const googleSignin = () => {
-        signInWithPopup(auth, provider)
-  .then((result) => {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    // The signed-in user info.
-    const user = result.user;
-    // IdP data available using getAdditionalUserInfo(result)
-    // ...
-  }).catch((error) => {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // The email of the user's account used.
-    const email = error.customData.email;
-    // The AuthCredential type that was used.
-    const credential = GoogleAuthProvider.credentialFromError(error);
-    // ...
-  });
+        signInWithRedirect(auth, provider)
+        getRedirectResult(auth)
+        .then((result) => {
+          // This gives you a Google Access Token. You can use it to access Google APIs.
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          const token = credential.accessToken;
+      
+          // The signed-in user info.
+          const user = result.user;
+          // IdP data available using getAdditionalUserInfo(result)
+          // ...
+        }).catch((error) => {
+          // Handle Errors here.
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // The email of the user's account used.
+          const email = error.customData.email;
+          // The AuthCredential type that was used.
+          const credential = GoogleAuthProvider.credentialFromError(error);
+          // ...
+        });
     }
 
 
     return (<>
             <img src="./assets/The Coffee Place final.png" alt="" className=" w-[50%] mx-auto -my-10" />
         <div className="bg-glass h-fit py-4 shadow-md">
-            <div className="bg-white text-blue-500 font-semibold h-12 mx-10 rounded-lg flex content-center mb-[2vh] shadow-md shadow-[#2a42504e]"
+            <div className="bg-white text-blue-500 font-semibold h-12 mx-10 rounded-lg flex content-center mb-[2vh] shadow-md "
             onClick={()=>googleSignin()}>
                 <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-1772223-1507807.png" className="w-8 float-left m-2" alt="" />
                 <h1 className="w-full -ml-10 my-auto text-center">Sign in with Google</h1>

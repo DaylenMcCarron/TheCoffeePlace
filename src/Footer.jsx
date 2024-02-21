@@ -28,16 +28,16 @@ const Footer = () => {
                         </a>
                     </div>
                  </div>
-                <div className=" mt-8 text-white">
+                <div className=" mt-8 text-coffee-3">
                     <h1 className="text-xl text-center pb-5">Quick Links</h1>
                     <div className="flex flex-wrap">
-                        <div className="basis-1/2 text-center underline">
+                        <div className="basis-1/2 text-center">
                             <Link to='/' className="w-full text-center">Home</Link>
                         </div>
-                        <div className="basis-1/2 text-center underline">
+                        <div className="basis-1/2 text-center">
                             <Link to='about' className="w-full text-center">About Us</Link>
                         </div>
-                        <div className="basis-1/2 text-center underline">
+                        <div className="basis-1/2 text-center">
                             <Link to='profile' className="w-full text-center">Profile</Link>
                         </div>
                     </div>

@@ -1,10 +1,10 @@
 
 
-const CartItem = ({ id, name, price, description, amt, incAmt, decAmt }) => {
+const CartItem = ({ id, name, price, description, amt, image, incAmt, decAmt }) => {
     return (
         <div className="flex border-b-[1px] bg-coffee-1 rounded-sm mx-1 border-coffee-3">
             <div className="min-h-[10vw] min-w-[10vw] h-[10vw] w-[10vw]">
-                <img className="p-2 rounded-md" src="./assets/chocolateCappuccino.jpg" alt="" />
+                <img className="p-2 rounded-md" src={`./assets/${image}`} alt="" />
             </div>
             <div className="ml-2 w-[68vw]">
                 <h1 className="text-md my-1 text-amber-950">

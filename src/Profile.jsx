@@ -5,10 +5,12 @@ import SignInForm from "./Signin";
 import LoginForm from "./LoginForm";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
+import { MyContext } from "./context";
 
 const Profile = () => {
 
     const { currentUser, loading } = useContext(AuthContext);
+    const context = useContext(MyContext)
 
     
 
@@ -41,8 +43,9 @@ const Profile = () => {
             <div className=" h-fit pb-2 w-full bg-glass mt-5">
                 <h1 className="p-2 text-amber-900">Must Try:</h1>
                 <div className="grid gap-2 gap-y-3 grid-cols-2 p-1">
-                    <ProductCard />
-                    <ProductCard />
+                {context.products.slice(0, 2).map(product => (
+    <ProductCard key={product.id} {...product} incAmt={context.incAmt} decAmt={context.decAmt} />
+))}
                 </div>
             </div>
         </div>) : (

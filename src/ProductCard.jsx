@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useContext } from "react"
 import { MyContext } from "./context"
 
-const ProductCard = ({ id, name, price, description, amt, incAmt, decAmt }) => {
+const ProductCard = ({ id, name, price, description, amt, image, incAmt, decAmt }) => {
     const context = useContext(MyContext);
     const [imgResize, setImageResize] = useState(true)
     return (
@@ -11,7 +11,7 @@ const ProductCard = ({ id, name, price, description, amt, incAmt, decAmt }) => {
                 imgResize ? null :
                 <p  onClick={()=>setImageResize(!imgResize)} className=" absolute top-[22%] text-xs px-2 h-28 overflow-scroll   text-coffee-4">{description}</p>
             }
-            <img  onClick={()=>setImageResize(!imgResize)} className={`object-cover  ${imgResize ? "h-4/6 w-full"  : " h-1/6 m-2"} rounded-md shadow-xl transition-all`} src="./assets/chocolateCappuccino.jpg" alt="" />
+            <img  onClick={()=>setImageResize(!imgResize)} className={`object-cover  ${imgResize ? "h-4/6 w-full"  : " h-1/6 m-2"} rounded-md shadow-xl transition-all`} src={`./assets/${image}`} alt="" />
 
             <h1  onClick={()=>setImageResize(!imgResize)} className=" px-2 text-md text-coffee-5 font-semibold h-12 overflow-hidden absolute top-[68%]">{name}</h1>
             <h1 className="absolute bottom-2 left-2 font-semibold font-sm"><span>&#8377;</span>{price}</h1>
