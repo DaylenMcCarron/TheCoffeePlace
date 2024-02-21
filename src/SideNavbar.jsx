@@ -14,10 +14,10 @@ const SideNavbar = () => {
                 <a href="/#shop">
                     <p className="w-full text-center">Shop</p>
                 </a>
-                <a href="#FAQ">
+                <a href="/#FAQ">
                     <p className="w-full text-center">FAQ</p>
                 </a>
-                <a href="#findus">
+                <a href="/#findus">
                     <p className="w-full text-center">Find Us</p>
                 </a>
                 <p className="w-full text-center">Orders</p>
