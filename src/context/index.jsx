@@ -14,6 +14,60 @@ const MyProvider = (props) => {
         { id: 5, name: 'Macchiato', price: 349, description: 'An espresso with a small amount of milk, providing a bolder coffee flavor with a touch of creaminess.' , amt: 0},
       ]);
 
+      const [FAQ, setFAQ] = useState([
+        {
+          id: 1,
+          question: '1. What types of coffee beans do you use?',
+          answer: 'We source our coffee beans from reputable growers around the world, ensuring the finest quality and diverse flavor profiles.'
+        },
+        {
+          id: 2,
+          question: '2. How is your coffee roasted?',
+          answer: 'Our coffee is carefully roasted to perfection, capturing the unique characteristics of each bean. We prioritize freshness and flavor in every batch.'
+        },
+        {
+          id: 3,
+          question: '3. Can I customize the grind size of my coffee?',
+          answer: 'Yes, you can! We offer various grind sizes to suit different brewing methods, including espresso, drip, and French press. Simply specify your preference during the order process.'
+        },
+        {
+          id: 4,
+          question: '4. Are your coffee products organic and sustainably sourced?',
+          answer: 'We are committed to sustainability. Many of our coffee products are organic, and we prioritize partnerships with farmers who follow environmentally friendly practices.'
+        },
+        {
+          id: 5,
+          question: '5. How do I store coffee beans for freshness?',
+          answer: 'To maintain freshness, store your coffee beans in an airtight container in a cool, dark place. Avoid exposure to heat, moisture, and direct sunlight to preserve the flavors.'
+        },
+        {
+          id: 6,
+          question: '6. Do you offer decaffeinated coffee options?',
+          answer: 'Yes, we have a selection of decaffeinated coffee options for those who prefer to enjoy the taste of coffee without the caffeine. Check our product listings for decaf choices.'
+        },
+        {
+          id: 7,
+          question: '7. How can I track my order?',
+          answer: 'Once your order is shipped, you will receive a tracking number via email. Use this number to track your package and get real-time updates on its delivery status.'
+        },
+        {
+          id: 8,
+          question: '8. What is your return policy?',
+          answer: 'We want you to be satisfied with your purchase. Check our return policy for details on returns and exchanges. If you have any issues, feel free to contact our customer support team.'
+        },
+        {
+          id: 9,
+          question: '9. Are there any discounts or promotions available?',
+          answer: 'Stay updated on our website and subscribe to our newsletter for the latest discounts and promotions. We frequently offer special deals on our coffee products.'
+        },
+        {
+          id: 10,
+          question: '10. Can I purchase gift cards for your coffee store?',
+          answer: 'Absolutely! Gift cards are available for purchase and make excellent presents for coffee enthusiasts. Choose the desired amount, and the recipient can use it to explore our diverse coffee offerings.'
+        },
+      ]);
+      
+
       const incAmt = (productId, productPrice) => {
         setProducts((prevProducts) =>
           prevProducts.map((product) =>
@@ -64,6 +118,7 @@ const MyProvider = (props) => {
                 incAmt:incAmt,
                 decAmt:decAmt,
                 totalPrice:totalPrice,
+                FAQ:FAQ,
             
             }
 

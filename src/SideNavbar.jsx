@@ -11,9 +11,15 @@ const SideNavbar = () => {
             <div className=" w-full h-[60%] mt-[8vh] grid grid-flow-row gap-y-2">
                 <Link to='/' className="w-full text-center">Home</Link>
                 <Link to='about' className="w-full text-center">About Us</Link>
-                <p className="w-full text-center">Shop</p>
-                <p className="w-full text-center">FAQ</p>
-                <p className="w-full text-center">Find Us</p>
+                <a href="/#shop">
+                    <p className="w-full text-center">Shop</p>
+                </a>
+                <a href="#FAQ">
+                    <p className="w-full text-center">FAQ</p>
+                </a>
+                <a href="#findus">
+                    <p className="w-full text-center">Find Us</p>
+                </a>
                 <p className="w-full text-center">Orders</p>
             </div>
             <div className=" w-full h-[25%]">
