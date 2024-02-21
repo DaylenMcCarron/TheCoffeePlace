@@ -10,7 +10,7 @@ const LoginForm = () => {
 
     const provider = new GoogleAuthProvider();
     const googleSignin = () => {
-        signInWithRedirect(auth, provider)
+        signInWithRedirect(auth, provider).then(
         getRedirectResult(auth)
         .then((result) => {
           // This gives you a Google Access Token. You can use it to access Google APIs.
@@ -30,7 +30,7 @@ const LoginForm = () => {
           // The AuthCredential type that was used.
           const credential = GoogleAuthProvider.credentialFromError(error);
           // ...
-        });
+        }));
     }
 
 
