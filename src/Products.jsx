@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import ProductCard from "./ProductCard"
+import { MyContext } from "./context";
 
 const Products = () => {
-    
+    const context = useContext(MyContext);
     return (
         <div className=" bg-coffee-2 pb-5">
             <div className=" bg-coffee-5 h-[7vh] flex items-center shadow-lg">
@@ -28,11 +30,9 @@ const Products = () => {
                 </p>
             </div>
             <div className="grid gap-2 gap-y-3 grid-cols-2 p-1">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+            {context.products.map(product => (
+                <ProductCard key={product.id} {...product} incAmt={context.incAmt} decAmt={context.decAmt} />
+            ))}   
             </div>
         </div>
     )

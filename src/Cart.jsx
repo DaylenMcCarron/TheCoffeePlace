@@ -73,7 +73,7 @@ const Cart = () => {
         }
         <div className="basis-[58%] flex flex-col items-right pl-3 justify-center text-coffee-5">
           <p>Items: {context.items}</p>
-          <p>Total: <span>&#8377;</span>1245/-</p>
+          <p>Total: <span>&#8377;</span>{context.totalPrice}</p>
         </div>
         <div className="basis-[30%] flex items-center justify-center">
           <div className="bg-red-400 rounded-md p-3" onClick={checkoutDisabled}>
