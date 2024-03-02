@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Products from './Products';
 import FAQ from './FAQ';
 import ContactUs from './ContactUs';
+import Reviews from './Reviews';
+import ImageCarousel from './ImageCarousal';
 
 const Home = () => {
     const [imageClass, setImageClass] = useState('object-left');
@@ -90,17 +92,23 @@ const Home = () => {
                             Brewing Dreams,<br />One Sip at a Time                        
                         </h1>
                         <h1 className={`text-white text-center font-mono text-2xl pt-4 transition-all duration-1000 absolute top-[6vh]  w-full ${twoTextClass}`}>
-                            Brewing Dreams,<br />One Sip at a Time, Type More stuff whatever you want
+                        Coffee Convenience, Crafted to Perfection: Unwrap the Aroma of Joy at Your Doorstep
                         </h1>
                         <h1 className={`text-white text-center font-mono text-2xl pt-4 transition-all duration-1000 absolute top-[6vh] w-full ${threeTextClass}`}>                        
-                            Brewing Dreams,<br />One Sip at a Time,  Update this also Put as much content as suited
+                        Sip, Smile, Repeat: Where Freshness Meets Your Threshold – Coffee, Delivered with Love.
                         </h1>
                     </div>
                 </div>
+
+
+            </div>
+            <div className={`w-full h-fit absolute top-[370vh]`}>
+                <ImageCarousel />
             </div>
             
         </div>
         <Products />
+        <Reviews />
         <FAQ />
         <ContactUs />
         </>
