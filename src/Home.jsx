@@ -102,9 +102,9 @@ const Home = () => {
 
 
             </div>
-            <div className={`w-full h-fit absolute top-[370vh]`}>
+            {/* <div className={`w-full h-fit absolute top-[370vh]`}>
                 <ImageCarousel />
-            </div>
+            </div> */}
             
         </div>
         <Products />
