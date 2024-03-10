@@ -6,7 +6,7 @@ const ProductCard = ({ id, name, price, description, amt, image, incAmt, decAmt 
     const context = useContext(MyContext);
     const [imgResize, setImageResize] = useState(true)
     return (
-        <div className="w-full h-64  rounded-md shadow-sm relative border-coffee-5 bg-glass">
+        <div className="w-full h-64  rounded-md shadow-sm relative border-coffee-5 bg-[#f3ece6eb]">
             {
                 imgResize ? null :
                 <p  onClick={()=>setImageResize(!imgResize)} className=" absolute top-[22%] text-xs px-2 h-28 overflow-scroll   text-coffee-4">{description}</p>

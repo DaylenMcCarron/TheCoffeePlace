@@ -6,6 +6,8 @@
     body {
         scroll-behavior: smooth;
         overflow-x: hidden;
+        background-image: url(../public/assets/coffee-background.webp);
+        background-attachment: fixed;
     }
     .png-container {
         overflow: hidden;
@@ -26,7 +28,7 @@
     }
 
     .bg-glass {
-        background: #ffffff58;
+        background: #ffffff73;
     }
     
 }

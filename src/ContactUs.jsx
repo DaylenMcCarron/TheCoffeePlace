@@ -1,7 +1,7 @@
 const ContactUs = () => {
 
     return (
-        <div id="findus" className=" h-fit pb-[10vh] bg-coffee-2">
+        <div id="findus" className=" h-fit pb-[10vh] bg-[#e6ccb2e4]">
             <div className=" bg-coffee-5 h-[7vh] flex items-center shadow-lg">
                 <h1 className="w-full text-[8vw] font-bold text-coffee-1 text-center border-y-2 border-coffee-2">Find Us</h1>
             </div>
