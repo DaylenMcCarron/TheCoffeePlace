@@ -3,108 +3,82 @@ import Products from './Products';
 import FAQ from './FAQ';
 import ContactUs from './ContactUs';
 import Reviews from './Reviews';
-import ImageCarousel from './ImageCarousal';
 
+const comments = [
+    { comment: 'This coffee is exceptional, rich in flavor with a delightful aroma. Truly a masterpiece.', name: 'Celine M' },
+    { comment: 'Sipping this coffee feels like a divine experience. The aroma alone makes my day.', name: 'John D' },
+    { comment: 'Every sip of this coffee transports me to a world of bliss. Simply irresistible!', name: 'Emma S' }
+
+        // ... more comments
+    ];
 const Home = () => {
     const [imageClass, setImageClass] = useState('object-left');
-    const [imagePosition, setImagePosition] = useState('fixed');
-    const [lastFixedPosition, setLastFixedPosition] = useState(0);
-    const [oneTextClass, setOneTextClass] = useState('opacity-1')
-    const [twoTextClass, setTwoTextClass] = useState('opacity-0')
-    const [threeTextClass, setThreeTextClass] = useState('opacity-0')
 
-    const VhtoPx = (val) => {
-        return (val * document.documentElement.clientHeight) / 100;
-    }
 
-    const backForth = () => {
-        setImageClass((prevImageClass) =>
-            prevImageClass === 'object-left' ? 'object-right' : 'object-left'
-        );
-    };
+const [currentCommentIndex, setCurrentCommentIndex] = useState(0);
+const [commentOpacity, setCommentOpacity] = useState(1);
+const [nameOpacity, setNameOpacity] = useState(1);
 
-    useEffect(() => {
-        backForth(); // Start the animation immediately
-        const intervalId = setInterval(backForth, 30000);
-        return () => clearInterval(intervalId); // Cleanup the interval when the component is unmounted
-    }, []);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            // Set the scroll threshold value in pixels
-            const scrollThreshold = VhtoPx(320); // Change this value as needed
+useEffect(() => {
+    const intervalId = setInterval(() => {
+        // Fade out the current comment
+        setCommentOpacity(0);
+        setNameOpacity(0);
 
-            // Check the scroll position
-            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        // Wait for fade out to complete before updating the comment
+        setTimeout(() => {
+            // Increment current comment index modulo the number of comments
+            setCurrentCommentIndex(prevIndex => (prevIndex + 1) % comments.length);
 
-            // Update the image position based on the scroll position
-            if (scrollPosition >= scrollThreshold) {
-                // Set position to 'absolute' and use the last fixed position as the top value
-                setImagePosition('absolute');
-                setLastFixedPosition(scrollThreshold);
-            } else {
-                // Set position to 'fixed'
-                setImagePosition('fixed');
-                setLastFixedPosition(0);
-            }
+            // Fade in the new comment
+            setCommentOpacity(1);
+            setNameOpacity(1);
+        }, 500); // Fade duration
 
-            if (scrollPosition > VhtoPx(0) && scrollPosition < VhtoPx(50)) {
-                setOneTextClass('opacity-1')
-            } else {
-                setOneTextClass('opacity-0')
-            }
-            if (scrollPosition > VhtoPx(120) && scrollPosition < VhtoPx(170)) {
-                setTwoTextClass('opacity-1')
-            } else {
-                setTwoTextClass('opacity-0')
-            }
-            if (scrollPosition > VhtoPx(240) && scrollPosition < VhtoPx(290)) {
-                setThreeTextClass('opacity-1')
-            } else {
-                setThreeTextClass('opacity-0')
-            }
-        };
+    }, 5000); // Transition every 5 seconds
 
-        // Attach the scroll event listener
-        window.addEventListener('scroll', handleScroll);
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+}, []); // Run effect only once on component mount
 
-        // Clean up the event listener when the component is unmounted
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     return (
         <>
-        <div className="bg-coffee-1 w-full h-[420svh]">
-            <div className="pt-[7vh] bg-coffee-5"></div>
-            <div className="w-full h-[30vh] object-contain" style={{ position: imagePosition, top: `${lastFixedPosition}px` }}>
+        <div className="bg-coffee-1 w-full h-fit">
+            <div className="w-full z-10 h-[80vh] absolute bg-gradient-to-b from-black to-transparent"></div>
+                <div className='w-full h-[100vh] absolute z-20 pt-[25vh] '>
+                    <p className=' text-white  text-3xl text-center ojuju-font m-2 '>What goes best with a cup of coffee? <b>Another cup!</b></p>
+                    <p className='  text-md text-center ojuju-font mt-10 text-coffee-1'>In Shop or Straight to your door</p>
+                    <div className='w-full flex justify-center '>
+                        <button className=' border-coffee-1 border-2 p-2 mt-2 px-12 border-solid text-coffee-1 bg-[#ffe4c823]' onClick={()=>{
+                        // Scroll smoothly to the element with ID "shop"
+                        document.getElementById('shop').scrollIntoView({
+                            behavior: 'smooth'});}
+                        }>ORDER NOW</button>
+                    </div>
+                    {/* <p className='mt-12  text-white  text-4xl text-center bg-[#402b1a88]'>Top-notch coffee, unmatched quality</p> */}
+                    <div className='flex justify-center'>
+                        <div className='border-[0px] w-[95%] h-fit border-coffee-2 bg-[#76523488] backdrop-blur-sm mt-[18vh] rounded-md p-2'>
+                        <p className={`text-white ojuju-font text-lg p-2 transition-opacity duration-500`} style={{ opacity: commentOpacity }}>{comments[currentCommentIndex].comment}</p>
+            <p className={`text-white ojuju-font font-semibold float-right mx-3 transition-opacity duration-500`} style={{ opacity: nameOpacity }}>- {comments[currentCommentIndex].name}</p>
+        
+
+                            <p className='text-white ojuju-font font-semibold w-full pt-8 text-center' onClick={()=>{
+                        // Scroll smoothly to the element with ID "shop"
+                        document.getElementById('Reviews').scrollIntoView({
+                            behavior: 'smooth'});}}>More reviews</p>
+                        </div>
+                    </div>
+                </div>
+
                 <img
                     id="landing-image"
                     className={`w-full h-[100vh] object-cover transition-all duration-[30000ms] ${imageClass}`}
                     src="./assets/coffeeBeans.jpeg"
                     alt=""
                 />
-                
-                <div className="w-full h-[30vh] top-[7vh] absolute">
-                    <div className="w-full h-[60vh] absolute bg-gradient-to-b from-black to-transparent">
-                        <h1 className={`text-white text-center font-mono text-2xl pt-4 transition-all duration-1000 absolute top-[6vh]  w-full ${oneTextClass}`}>
-                            Brewing Dreams,<br />One Sip at a Time                        
-                        </h1>
-                        <h1 className={`text-white text-center font-mono text-2xl pt-4 transition-all duration-1000 absolute top-[6vh]  w-full ${twoTextClass}`}>
-                        Coffee Convenience, Crafted to Perfection: Unwrap the Aroma of Joy at Your Doorstep
-                        </h1>
-                        <h1 className={`text-white text-center font-mono text-2xl pt-4 transition-all duration-1000 absolute top-[6vh] w-full ${threeTextClass}`}>                        
-                        Sip, Smile, Repeat: Where Freshness Meets Your Threshold – Coffee, Delivered with Love.
-                        </h1>
-                    </div>
-                </div>
 
-
-            </div>
-            {/* <div className={`w-full h-fit absolute top-[370vh]`}>
-                <ImageCarousel />
-            </div> */}
+            
             
         </div>
         <Products />
