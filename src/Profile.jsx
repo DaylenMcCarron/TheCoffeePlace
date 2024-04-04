@@ -15,10 +15,10 @@ const Profile = () => {
     
 
     return (
-        <div className="h-screen w-screen bg-gradient-to-b from-coffee-4 pt-[10vh] to-coffee-1 ">
+        <div className="h-fit w-screen bg-gradient-to-b from-coffee-4 pt-[10vh] to-coffee-1 ">
       {currentUser ? (
-        <div>
-            <div className=" flex justify-center bg-glass rounded-full">
+        <div className="lg:px-[30%]">
+            <div className=" flex justify-center bg-glass rounded-full ">
                 <img 
                     className="w-1/2"
                     src="/assets/undraw_drink_coffee_v3au.svg" 

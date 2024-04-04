@@ -58,7 +58,7 @@ useEffect(() => {
                     </div>
                     {/* <p className='mt-12  text-white  text-4xl text-center bg-[#402b1a88]'>Top-notch coffee, unmatched quality</p> */}
                     <div className='flex justify-center'>
-                        <div className='border-[0px] w-[95%] h-fit border-coffee-2 bg-[#76523488] backdrop-blur-sm mt-[18vh] rounded-md p-2'>
+                        <div className='border-[0px] w-[95%] lg:w-[50%] h-fit border-coffee-2 bg-[#76523488] backdrop-blur-sm mt-[18vh] rounded-md p-2'>
                         <p className={`text-white ojuju-font text-lg p-2 transition-opacity duration-500`} style={{ opacity: commentOpacity }}>{comments[currentCommentIndex].comment}</p>
             <p className={`text-white ojuju-font font-semibold float-right mx-3 transition-opacity duration-500`} style={{ opacity: nameOpacity }}>- {comments[currentCommentIndex].name}</p>
         

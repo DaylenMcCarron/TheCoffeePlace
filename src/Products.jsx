@@ -6,10 +6,10 @@ const Products = () => {
     const context = useContext(MyContext);
     return (
         <div id="shop" className=" bg-glass pb-5">
-            <div className=" bg-coffee-5 h-[7vh] flex items-center shadow-lg">
-                <h1 className="w-full text-[8vw] font-bold text-coffee-1 text-center border-y-2 border-coffee-2">SHOP</h1>
+            <div className=" bg-coffee-5 h-[7vh] lg:h-36 flex items-center shadow-lg">
+                <h1 className="w-full text-[8vw] lg:text-8xl font-bold text-coffee-1 text-center border-y-2 border-coffee-2">SHOP</h1>
             </div>
-            <div className=" text-sm flex text-coffee-5 bg-[#e6ccb2b0]">
+            <div className=" text-sm flex text-coffee-5 bg-[#e6ccb2b0] lg:px-24 lg:text-lg lg:font-semibold">
                 <p className=" p-1 basis-1/2">Filter: 
                 <select name="filter" id="filter" className="bg-transparent outline-none appearance-none p-2">
                 <option value="none">None</option>
@@ -29,7 +29,7 @@ const Products = () => {
                 </select>
                 </p>
             </div>
-            <div className="grid gap-2 gap-y-3 grid-cols-2 p-1">
+            <div className="grid gap-2 gap-y-3 grid-cols-2 lg:grid-cols-4 p-1 lg:px-24 lg:gap-4">
             {context.products.map(product => (
                 <ProductCard key={product.id} {...product} incAmt={context.incAmt} decAmt={context.decAmt} />
             ))}   

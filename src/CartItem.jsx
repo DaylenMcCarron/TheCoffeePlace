@@ -21,7 +21,7 @@ const CartItem = ({ id, name, price, description, amt, image, incAmt, decAmt }) 
                     {name}</h1>
                 <p className="text-xs pb-2 text-coffee-6">{description}</p>
             </div>
-            <div className="min-h-[16vw] h-[16vw] w-fit">
+            <div className="min-h-[16vw] h-[16vw] lg:h-0 lg:min-h-0 w-fit lg:pt-6 lg:pl-24">
                 <h1 className=" text-center mt-2 text-sm font-bold text-coffee-5 bg-white border-coffee-4 border-[1px] border-b-0 rounded-t-md"><span>&#8377;</span>{price * amt}</h1>
             <div className="border-[1px] border-coffee-2 rounded-md w-fit h-fit bg-coffee-2 text-white flex align-middle justify-center">
                 <span className="material-symbols-outlined text-coffee-5" onClick={()=>decAmt(id,price)}>remove</span>

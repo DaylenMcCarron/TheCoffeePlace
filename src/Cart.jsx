@@ -49,7 +49,7 @@ const Cart = () => {
         </div>
       )}
 
-      <div className="fixed bottom-0 z-40 bg-coffee-1 w-full h-[8vh] border-t-[1px] border-coffee-4 flex backdrop-blur-sm bg-header ">
+      <div className="fixed bottom-0 z-40 bg-coffee-1 w-full lg:w-[50%] lg:bottom-2 lg:right-2 lg:rounded-lg lg:border-2 lg:border-coffee-5 shadow-lg h-[8vh] border-t-[1px] border-coffee-4 flex backdrop-blur-sm bg-header ">
       {viewCart == false ? (
           <div className="basis-[10%] bg-coffee-2 flex items-center justify-center">
             <span

@@ -3,8 +3,8 @@ import Newsletter from "./Newsletter"
 
 const Footer = () => {
     return (
-        <div className="  bg-coffee-5 h-[75vh] pb-5">
-            <div className=" w-full h-full bg-gradient-to-b to-black via-black via-70% from-transparent">
+        <div className="  bg-coffee-5 h-[75vh] lg:h-[50vh] pb-5">
+            <div className=" w-full h-full  bg-gradient-to-b to-black via-black via-70% from-transparent">
                 <Newsletter />
                 <div className="flex justify-center items-center gap-4">
                     <div className="h-14 w-14 rounded-full p-2">
@@ -28,7 +28,7 @@ const Footer = () => {
                         </a>
                     </div>
                  </div>
-                <div className=" mt-8 text-coffee-3">
+                <div className=" mt-8 text-coffee-3 lg:w-[50%] lg:mx-auto">
                     <h1 className="text-xl text-center pb-5">Quick Links</h1>
                     <div className="flex flex-wrap">
                         <div className="basis-1/2 text-center">

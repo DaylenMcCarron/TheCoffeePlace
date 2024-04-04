@@ -5,7 +5,7 @@ const Newsletter = () => {
     
     return (
 
-        <div className=" w-full h-fit">
+        <div className=" w-full h-fit lg:w-[50%] lg:mx-auto">
         <div className=" pt-12 pb-5 text-white ">
             {subscribe ? 
             <h1 className=" float-right backdrop-blur-sm h-[25%] w-full text-center p-4">Thankyou for Subscribing to our Newsletter. Please check your inbox</h1>
