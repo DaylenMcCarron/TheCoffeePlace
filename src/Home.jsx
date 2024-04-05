@@ -5,9 +5,9 @@ import ContactUs from './ContactUs';
 import Reviews from './Reviews';
 
 const comments = [
-    { comment: 'This coffee is exceptional, rich in flavor with a delightful aroma. Truly a masterpiece.', name: 'Celine M' },
-    { comment: 'Sipping this coffee feels like a divine experience. The aroma alone makes my day.', name: 'John D' },
-    { comment: 'Every sip of this coffee transports me to a world of bliss. Simply irresistible!', name: 'Emma S' }
+    { comment: 'This bold and intense coffee is perfect for those who like their coffee with a kick. It has a rich, smoky flavor with hints of spice. The strong aroma fills the room and the taste lingers on the palate.', name: 'Celine M' },
+    { comment: 'Amazing Coffee + Quick Delivery. Definitely gonna order again!', name: 'A Singh' },
+    { comment: 'Every sip of this coffee transports me to a world of bliss. Simply irresistible!', name: 'Emma W' }
 
         // ... more comments
     ];
@@ -58,12 +58,12 @@ useEffect(() => {
                     </div>
                     {/* <p className='mt-12  text-white  text-4xl text-center bg-[#402b1a88]'>Top-notch coffee, unmatched quality</p> */}
                     <div className='flex justify-center'>
-                        <div className='border-[0px] w-[95%] lg:w-[50%] h-fit border-coffee-2 bg-[#76523488] backdrop-blur-sm mt-[18vh] rounded-md p-2'>
-                        <p className={`text-white ojuju-font text-lg p-2 transition-opacity duration-500`} style={{ opacity: commentOpacity }}>{comments[currentCommentIndex].comment}</p>
-            <p className={`text-white ojuju-font font-semibold float-right mx-3 transition-opacity duration-500`} style={{ opacity: nameOpacity }}>- {comments[currentCommentIndex].name}</p>
+                        <div className='border-2 w-[95%] lg:w-[50%] h-fit font-bold border-coffee-5 text-coffee-5 bg-[#ffecdedb] backdrop-blur-sm mt-[18vh] rounded-md p-2'>
+                        <p className={`font-bold ojuju-font text-lg p-2 transition-opacity duration-500`} style={{ opacity: commentOpacity }}>{comments[currentCommentIndex].comment}</p>
+            <p className={` ojuju-font font-bold float-right mx-3 transition-opacity duration-500`} style={{ opacity: nameOpacity }}>- {comments[currentCommentIndex].name}</p>
         
 
-                            <p className='text-white ojuju-font font-semibold w-full pt-8 text-center' onClick={()=>{
+                            <p className=' ojuju-font font-semibold w-full pt-8 text-center' onClick={()=>{
                         // Scroll smoothly to the element with ID "shop"
                         document.getElementById('Reviews').scrollIntoView({
                             behavior: 'smooth'});}}>More reviews</p>

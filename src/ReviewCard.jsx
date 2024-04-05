@@ -11,7 +11,7 @@ const ReviewCard = () => {
                         </div>
                     </div>
                     <div className="bg--300 basis-full">
-                        <h2 className=" font-semibold px-2">Amar Singh Chavan</h2>
+                        <h2 className=" font-semibold px-2">A Singh</h2>
                         <div className=" text-amber-300 px-2">
                             <span class="material-symbols-outlined font-semibold text-xl">star</span>
                             <span class="material-symbols-outlined font-semibold text-xl">star</span>
@@ -24,7 +24,7 @@ const ReviewCard = () => {
                 </div>
                 <hr />
                 <div className="text-sm p-2">
-                    As a busy professional, finding time to visit a coffee shop can be challenging. That's why I'm thrilled to have stumbled upon TheCoffeePlace, a coffee delivery service that has redefined my mornings. The convenience of having a carefully curated selection of beans delivered directly to my door has been a game-changer. I opted for their Colombian single-origin, and I was blown away by the freshness and depth of flavor. The packaging was not only secure but also eco-conscious – a detail that I greatly appreciate. The Coffee Place has mastered the art of combining quality coffee with a hassle-free delivery service. If you're looking for a premium coffee experience without leaving your home, this is the service for you.
+                Amazing Coffee + Quick Delivery. Definitely gonna order again!
                 </div>
 
                 <img src="./assets/review1.jpeg" alt="" className=" object-cover w-full h-[90vw] lg:h-[40vw] rounded-b-lg"/>
@@ -38,7 +38,7 @@ const ReviewCard = () => {
                         </div>
                     </div>
                     <div className="bg--300 basis-full">
-                        <h2 className=" font-semibold px-2">Amar Singh Chavan</h2>
+                        <h2 className=" font-semibold px-2">Celine M</h2>
                         <div className=" text-amber-300 px-2">
                             <span class="material-symbols-outlined font-semibold text-xl">star</span>
                             <span class="material-symbols-outlined font-semibold text-xl">star</span>
@@ -51,10 +51,37 @@ const ReviewCard = () => {
                 </div>
                 <hr />
                 <div className="text-sm p-2">
-                My roommate and I decided to try Brew Breeze for our morning coffee fix, and it was a double delight! We ordered the Breakfast Blend and the Colombian Roast, both of which exceeded our expectations. The aroma upon opening the packages was invigorating, and the flavors were rich and satisfying. The delivery was quick, and the packaging was eco-friendly. Brew Breeze has won us over with its seamless service and exceptional coffee. Two thumbs up for making our mornings brighter!
+                This bold and intense coffee is perfect for those who like their coffee with a kick. It has a rich, smoky flavor with hints of spice. The strong aroma fills the room and the taste lingers on the palate. 
                 </div>
 
                 <img src="./assets/review5.jpeg" alt="" className=" object-cover w-full h-[90vw] lg:h-[40vw] rounded-b-lg"/>
+            </div>
+            <div className=" w-[95%]  rounded-lg mx-auto mt-2 shadow-md bg-white">
+                <div className=" h-16 w-full flex rounded-t-lg overflow-hidden p-2">
+
+                    <div className=" basis-16">
+                        <div className="bg-black rounded-full h-full">
+
+                        </div>
+                    </div>
+                    <div className="bg--300 basis-full">
+                        <h2 className=" font-semibold px-2">Jon Snow</h2>
+                        <div className=" text-amber-300 px-2">
+                            <span class="material-symbols-outlined font-semibold text-xl">star</span>
+                            <span class="material-symbols-outlined font-semibold text-xl">star</span>
+                            <span class="material-symbols-outlined font-semibold text-xl">star</span>
+                            <span class="material-symbols-outlined font-semibold text-xl">star</span>
+                            <span class="material-symbols-outlined font-semibold text-xl">star</span>
+
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div className="text-sm p-2">
+                My roommate and I decided to try this place for our morning coffee fix, and it was a double delight! We ordered the Breakfast Blend and the Colombian Roast, both of which exceeded our expectations. The aroma upon opening the packages was invigorating, and the flavors were rich and satisfying. The delivery was quick, and the packaging was eco-friendly. Brew Breeze has won us over with its seamless service and exceptional coffee. Two thumbs up for making our mornings brighter!
+                </div>
+
+                <img src="./assets/review2.jpeg" alt="" className=" object-cover w-full h-[90vw] lg:h-[40vw] rounded-b-lg"/>
             </div>
             <div className=" w-[95%]  rounded-lg mx-auto mt-2 shadow-md bg-white">
                 <div className=" h-16 w-full flex rounded-t-lg overflow-hidden p-2">
@@ -83,6 +110,7 @@ const ReviewCard = () => {
 
                 <img src="./assets/review3.jpeg" alt="" className=" object-cover w-full h-[90vw] lg:h-[40vw] rounded-b-lg"/>
             </div>
+            
             <div className=" w-[95%]  rounded-lg mx-auto mt-2 shadow-md bg-white">
                 <div className=" h-16 w-full flex rounded-t-lg overflow-hidden p-2">
 
@@ -92,34 +120,7 @@ const ReviewCard = () => {
                         </div>
                     </div>
                     <div className="bg--300 basis-full">
-                        <h2 className=" font-semibold px-2">Altamash S</h2>
-                        <div className=" text-amber-300 px-2">
-                            <span class="material-symbols-outlined font-semibold text-xl">star</span>
-                            <span class="material-symbols-outlined font-semibold text-xl">star</span>
-                            <span class="material-symbols-outlined font-semibold text-xl">star</span>
-                            <span class="material-symbols-outlined font-semibold text-xl">star</span>
-                            <span class="material-symbols-outlined font-semibold text-xl">star</span>
-
-                        </div>
-                    </div>
-                </div>
-                <hr />
-                <div className="text-sm p-2">
-                This bold and intense coffee is perfect for those who like their coffee with a kick. It has a rich, smoky flavor with hints of spice. The strong aroma fills the room and the taste lingers on the palate. 
-                </div>
-
-                <img src="./assets/review2.jpeg" alt="" className=" object-cover w-full h-[90vw] lg:h-[40vw] rounded-b-lg"/>
-            </div>
-            <div className=" w-[95%]  rounded-lg mx-auto mt-2 shadow-md bg-white">
-                <div className=" h-16 w-full flex rounded-t-lg overflow-hidden p-2">
-
-                    <div className=" basis-16">
-                        <div className="bg-black rounded-full h-full">
-
-                        </div>
-                    </div>
-                    <div className="bg--300 basis-full">
-                        <h2 className=" font-semibold px-2">Katie</h2>
+                        <h2 className=" font-semibold px-2">Dale</h2>
                         <div className=" text-amber-300 px-2">
                             <span class="material-symbols-outlined font-semibold text-xl">star</span>
                             <span class="material-symbols-outlined font-semibold text-xl">star</span>
@@ -136,6 +137,14 @@ const ReviewCard = () => {
                 </div>
 
                 <img src="./assets/review4.jpeg" alt="" className=" object-cover w-full h-[90vw] lg:h-[40vw] rounded-b-lg"/>
+            </div>
+            <div className=" w-[95%] h-fit rounded-lg mx-auto mt-2 shadow-md bg-white">
+                <h1 className=" text-3xl font-bold text-center pt-2 text-coffee-5">Add a Review</h1>
+                <div className="lg:w-[80%] w-[95%] mx-auto ">
+
+                <textarea className="border-[1px] border-slate-700 h-[60vw] lg:h-[30vh] rounded-lg w-full p-2 bg-[#ffedde6d]"/>
+                <button className="w-full bg-coffee-3 p-2 text-white mb-6">Submit Review</button>
+                </div>
             </div>
         </>
     )
